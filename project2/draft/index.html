@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project #2-2: Meal Combo Order</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Meal Combo Ordering System</h1>
+
+    <p><a href="flowchart.pdf" target="_blank">View my flowchart</a></p>
+
+    <form id="comboForm">
+        <p>
+            <label for="item1">First item:</label>
+            <select id="item1">
+                <option value="">-Select-</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Salad">Salad</option>
+                <option value="Burger">Burger</option>
+                <option value="Fries">Fries</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="item2">Second item:</label>
+            <select id="item2">
+                <option value="">-Select-</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Salad">Salad</option>
+                <option value="Burger">Burger</option>
+                <option value="Fries">Fries</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" placeholder="Enter 5-digit ZIP code">
+        </p>
+
+        <button type="button" onclick="main()">Submit</button>
+    </form>
+
+    <p id="output"></p>
+</body>
+
+</html>
