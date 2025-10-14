@@ -1,0 +1,72 @@
+/* Change the font and add some margin to the body */
+body {
+    font-family: Arial, sans-serif; /* Change the text font */
+    font-size: 1rem; /* Set a base font size */
+    margin: 2rem; /* Add space around the content */
+    line-height: 1.6; /* Add space between lines */
+}
+
+/* Style the header */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Style paragraphs and images */
+p {
+    max-width: 600px; /* Shorten the paragraph width */
+    width: 100%;
+    margin-bottom: 1.5rem; /* Add space below paragraphs */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    
+    border-width: 5px;/* add a border */
+    border-style: solid;
+    border-color: red;
+}
+
+/* When mouse is on the image, change the border color */
+img:hover {
+    border-color: plum;/* Change border color on hover */
+}
+
+/* Style figure captions */
+figcaption {
+    font-style: italic;
+}
+
+/* Style links with a transition effect */
+a {
+    color: blue;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+a:hover, a:focus {
+    color: green;
+    text-decoration: none;
+}
+
+/*
+    Resources used:
+   - Referenced class CSS tutorial (Recording)
+   - Followed Codecademy CSS course: https://www.codecademy.com/learn/learn-css
+*/
