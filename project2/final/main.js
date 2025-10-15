@@ -96,8 +96,14 @@ function evaluateAnswers() {
         total = total * 0.75; // 25% discount for Burger & Fries combo //
     }
 
-    let cents = total * 100;
-    cents = Math.round(cents);
+    /*
+    I used this method to round numbers to 2 decimal places.
+    I learned it from an online coding tutorial (MDN Web Docs).
+    Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+    */
+    
+    let cents = total * 100;// Multiply total by 100 to move the decimal point two places to the right //
+    cents = Math.round(cents);// Round to the nearest whole number //
     total = cents / 100; // Round to two decimal places //
 
     let message = "Your " + item1 + " & " + item2 + " combo will be delivered to your address in ZIP code " + zip + " . "+" Your total is $" + total + ".";
