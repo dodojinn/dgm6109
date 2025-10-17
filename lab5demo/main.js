@@ -22,8 +22,6 @@ let drawing = d3.select("#canvas")
     .attr("width", 500)
     .attr("height", 500);
 
-let svg = drawing;
-
 let border = drawing.append("rect")
     .attr("width", 500)
     .attr("height", 500)
@@ -32,6 +30,6 @@ let border = drawing.append("rect")
 
 function drawImage() {
 
-    drummer(svg,xInput,yInput,showOrigin,choice);
+    drummer(drawing,xInput,yInput,showOrigin,choice);
     /***** DO NOT ADD OR EDIT ANYTHING BELOW THIS LINE ******/
 }
