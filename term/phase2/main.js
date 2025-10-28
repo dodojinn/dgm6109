@@ -263,7 +263,7 @@ let weatherFoodData = [ //List of daily observations //
     mealsPerDay: 2,
     percentHotMeals: 90,
     emotionalImpact: 3
-}];// end of weatherFoodData array //
+}];// List of daily observations //
 
 // console.log(JSON.stringify(weatherFoodData));
 showData(weatherFoodData);
