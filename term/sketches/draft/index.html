@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Term Project - Visualization Proposals (Jingjing Fang)</title>
+    <style>
+      html {
+        font-size: 1rem;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2.5rem;
+        line-height: 1.6;
+        background-color: #ffffff;
+        color: #222222;
+      }
+
+      h1 {
+        color: #e64a6f;
+        border-bottom: 0.2rem solid #e64a6f;
+        padding-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+
+      h2 {
+        color: #333333;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        background-color: #f9f9f9;
+        padding: 1rem 1.5rem;
+        border: 0.1rem solid #dddddd;
+        border-radius: 0.6rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+
+      a {
+        color: #e64a6f;
+        text-decoration: underline;
+        font-size: 1rem;
+      }
+
+      a:hover {
+        color: #b0305c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Three Visualization Proposals</h1>
+    <p><b>Name:</b> Jingjing Fang</p>
+
+    <h2>About My Dataset</h2>
+    <p>
+      I recorded my daily life for 30 days, focusing on how weather and
+      temperature affect my eating habits and emotional state.
+    </p>
+
+    <p>The dataset includes the following fields:</p>
+
+    <ul>
+      <li>High Temp (°C)</li>
+      <li>Low Temp (°C)</li>
+      <li>Weather Type</li>
+      <li>Total Calorie Intake (kcal)</li>
+      <li>Meals per Day</li>
+      <li>% of Hot Meals</li>
+      <li>Emotional Impact (0-5)</li>
+    </ul>
+
+    <h2>Proposal 1 - Bubble Plot</h2>
+    <p>
+      <b>Hypothesis:</b> As the daily temperature decreases, my total calorie
+      intake increases. Colder weather also makes me prefer hot meals, and my
+      mood tends to drop slightly on those days.
+    </p>
+
+    <p>
+      <b>Data Fields:</b> Low Temp (°C), Total Calorie Intake (kcal), % of Hot
+      Meals, Emotional Impact (0-5)
+    </p>
+
+    <p>
+      <b>Visual Encoding:</b> X = Low Temp (°C), Y = Total Calories (kcal),
+      Bubble Size = % of Hot Meals, Bubble Color = Emotional Impact (blue = low,
+      yellow = high)
+    </p>
+
+    <p>
+      <b>Goal:</b> To explore how colder temperatures influence both eating
+      habits and emotional changes through a simple but clear scatter-based
+      visualization.
+    </p>
+    <p><a href="sketch1.pdf">Open sketch1.pdf</a></p>
+
+    <h2>Proposal 2 - Weather Mood Calendar</h2>
+    <p>
+      <b>Hypothesis:</b> My emotional intensity changes with different weather
+      types — I usually feel calmer on sunny days and lower on rainy ones. On
+      days with lower mood, I tend to eat more meals, which appears as a larger
+      color area inside each calendar square.
+    </p>
+
+    <p>
+      <b>Data Fields:</b> Date, Weather, Emotional Impact (0-5), Meals per Day
+    </p>
+
+    <p>
+      <b>Visual Encoding:</b> X = Date (calendar layout), Y = Weather Type,
+      Color Hue = Weather, Color Opacity = Emotion (higher opacity = stronger
+      emotion), Color Fill Area = Meals per Day (larger area = more meals)
+    </p>
+
+    <p>
+      <b>Goal:</b> To visualize daily mood and meal patterns through color
+      transparency and area size in a compact, diary-like calendar format.
+    </p>
+    <p><a href="sketch2.pdf">Open sketch2.pdf</a></p>
+
+    <h2>Proposal 3 - Mood Orbit</h2>
+
+    <p>
+      <b>Hypothesis:</b> Days with moderate temperature tend to cluster toward
+      higher mood and balanced calorie intake, forming a calm outer orbit. As
+      temperature becomes extreme — either very cold or very hot — the pattern
+      moves inward, where mood drops and calorie intake rises.
+    </p>
+
+    <p>
+      <b>Data Fields:</b> Weather, High Temp (°C) / Low Temp (°C), Emotional
+      Impact (0-5), Total Calorie Intake (kcal), % of Hot Meals
+    </p>
+
+    <p>
+      <b>Visual Encoding:</b> The center of the chart represents four main
+      weather types — sunny, cloudy, rainy, and snowy. Circular orbits around
+      the center represent temperature zones: the outer rings show warmer days,
+      and the inner rings show colder days. Each point on an orbit corresponds
+      to one day. The color of each point encodes mood (blue = low, yellow =
+      high), and its distance from the center represents total calorie intake
+      (further = more calories). The opacity of each point reflects the
+      percentage of hot meals (higher opacity = higher proportion of hot meals).
+    </p>
+
+    <p>
+      <b>Goal:</b> To express the relationship between weather, temperature,
+      emotion, and calorie intake through an orbital metaphor. The arrangement
+      allows viewers to easily distinguish between balanced “healthy days” in
+      the outer orbits and stressful, irregular days closer to the center.
+    </p>
+
+    <p><a href="sketch3.pdf">Open sketch3.pdf</a></p>
+
+    <h3>Credits / References</h3>
+    <p>
+      <a href="http://www.dear-data.com/theproject">Dear Data</a> inspired me to
+      use symbolic and emotional visual metaphors. It made me realize that
+      weather and mood are not only data but also personal experiences that can
+      be shown through color and rhythm.
+    </p>
+
+    <p>
+      <a href="https://www.data-to-viz.com">Data-to-Viz</a> helped me choose the
+      right chart forms and understand which structures are better for comparing
+      multiple variables, especially when combining categorical (weather) and
+      numerical (temperature, calories) data.
+    </p>
+
+    <p>
+      <a href="https://observablehq.com/@d3/gallery">Observable D3 Gallery</a>
+      gave me ideas about layout and spacing. Although I did not use any code,
+      its circular and calendar-based examples helped me plan the overall
+      organization of my designs.
+    </p>
+  </body>
+</html>
