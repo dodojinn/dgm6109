@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Plot 2 - Emotion vs Meals</title>
+    <script src="d3.min.js"></script>
+  </head>
+
+  <body>
+    <div id="container" style="margin: 0 auto">
+      
+      <!-- Chart -->
+      <div id="canvas" style="text-align: center"></div>
+
+      <!-- Title -->
+      <h1 style="text-align: center">
+        How emotional impact relates to my meals, temperature, and hot meal preference
+      </h1>
+
+      <!-- Hypothesis -->
+      <p style="text-align: center">
+        <strong>Hypothesis:</strong> Stronger emotional impact may relate to more meals per day, 
+        and external factors like temperature may also influence hot meal choices.
+      </p>
+
+      <!-- Chart explanation -->
+      <p style="text-align: left; margin-left: 40px; margin-right: 40px;">
+        Each circle represents a day. The <strong>x-axis</strong> shows emotional impact (0-5), 
+        the <strong>y-axis</strong> shows meals per day (0-4), 
+        the <strong>circle size</strong> represents hot meal percentage, and the 
+        <strong>circle color</strong> represents temperature (cool → warm → hot).
+        To reduce outliers, days with only one meal were removed using 
+        <strong>Array.filter()</strong>.
+      </p>
+
+      <!-- Reflection -->
+      <p
+        style="
+          text-align: left;
+          line-height: 1.6em;
+          margin-left: 40px;
+          margin-right: 40px;
+        "
+      >
+        This visualization helped me understand how different dataset properties
+        can be layered together in a single scatterplot. I practiced combining
+        color, size, and filtered subsets to reveal patterns more clearly. Using
+        <strong>Array.filter()</strong> allowed me to remove one-meal days that
+        acted as outliers, which made the overall relationship easier to read.
+        I also learned how thoughtful color choices and consistent spacing can
+        improve the clarity and mood of a visualization, helping the chart feel
+        both readable and expressive.
+      </p>
+
+    </div>
+  </body>
+
+  <script src="main.js"></script>
+</html>
