@@ -1,0 +1,55 @@
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 2.5rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #222222;
+  max-width: 60rem;
+}
+
+h1 {
+  color: #e64a6f;
+  border-bottom: 0.2rem solid #e64a6f;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+h2 {
+  color: #333333;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* List Styles */
+ul {
+  background-color: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border: 0.1rem solid #dddddd;
+  border-radius: 0.6rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Link Styles */
+a {
+  color: #e64a6f;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: #b0305c;
+  background-color: #ffe9f0;
+}
