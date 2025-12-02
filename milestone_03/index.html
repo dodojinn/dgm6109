@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MangaVerse - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Top Navigation Area -->
+    <header class="site-header">
+      <!-- logo -->
+      <div class="logo-area">
+        <div class="logo-icon-wrapper">
+          <img src="images/logo.png" alt="MangaVerse logo" class="logo-image" />
+        </div>
+
+        <div class="logo-text">
+          <p class="logo-title">MangaVerse</p>
+        </div>
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="genres.html">Genres</a></li>
+          <li><a href="ranking.html">Ranking</a></li>
+          <li><a href="favourite.html">Favourite</a></li>
+        </ul>
+      </nav>
+
+      <!-- search + user -->
+      <div class="header-right">
+        <form class="search-form" role="search">
+          <label class="visually-hidden" for="search-input">Search manga</label>
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search"
+            name="search"
+          />
+        </form>
+
+        <a href="user.html" class="user-button" aria-label="User profile">
+          <span aria-hidden="true">👤</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- home-banner -->
+      <section class="hero-image-section">
+        <a href="manga-detail.html" class="hero-banner-link">
+          <img
+            src="images/home-banner.jpg"
+            alt="Manga characters in an alley"
+            class="hero-image"
+          />
+        </a>
+      </section>
+
+      <!-- Popular This Week -->
+      <section class="popular-section">
+        <h2 class="popular-title">Popular This Week</h2>
+
+        <div class="popular-card">
+          <p class="popular-text">
+            “A desperate boy merges with a chainsaw devil and is thrown into a
+            twisted world of hunters and monsters.”
+          </p>
+
+          <a href="#" class="popular-button">more→</a>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Welcome -->
+      <section class="welcome-section">
+        <h2 class="welcome-title"><span class="underline">Welcome</span> 🫶</h2>
+
+        <div class="welcome-card">
+          <ul>
+            <li>
+              <em>
+                “MangaVerse is a space where manga fans can explore stories,
+                uncover hidden gems, and find new favorites through a seamless
+                browsing experience.”
+              </em>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section class="about-section">
+        <h2 class="about-title">◎ About Us</h2>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 MangaVerse. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
