@@ -96,32 +96,36 @@ main {
 }
 
 /* hover and active underline effect */
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 0.1rem;
-  width: 0;
-  background-color: #ff7fb5;
-  transition: width 0.2s;
+.main-nav a {
+  text-decoration: none;
+  color: #222222;
+  
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0.2rem;
+  padding-left: 0;
 }
 
+/* hover effect */
 .main-nav a:hover {
   color: #ff7fb5;
+
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #ff7fb5;
 }
 
-.main-nav a:hover::after {
-  width: 100%;
-}
-
-/* Current page */
+/* Current page active */
 .main-nav a.active {
   color: #ff7fb5;
-}
 
-.main-nav a.active::after {
-  width: 100%;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #ff7fb5;
 }
 
 /* Right side search + user button */
