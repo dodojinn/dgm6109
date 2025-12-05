@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cold Days, Warm Meals</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+    <main>
+      <div id="canvas"></div>
+
+      <h1>Cold Days, Warm Meals</h1>
+
+      <p>
+        <strong>Hypothesis:</strong> On colder days, I eat more total calories.
+      </p>
+
+      <p>
+        This scatterplot compares my average daily temperature (°C) on the
+        X-axis and my total calorie intake (kcal) on the Y-axis. Each circle
+        represents one day in my dataset. Besides these two main factors, I also
+        show how many meals I ate and how strongly food affected my emotions.
+        Bubble size shows
+        <strong>meals per day</strong>: smaller bubbles represent days when I
+        ate 2 meals, and larger bubbles show days when I ate 3 meals. Bubble
+        color shows my <strong>emotional impact after eating</strong> on a 1-5
+        scale. These extra elements help me see not just whether I eat more on
+        cold days, but also how I spread my meals and how “comforting” the food
+        feels.
+      </p>
+
+      <p>
+        Looking at the visualization, many of the colder days on the left side
+        of the chart sit higher on the Y-axis, which means my total calories are
+        often higher when the average temperature is low. However, the pattern
+        is not perfect: there are a few warmer days with high calorie intake and
+        a few colder days where I still ate less. The larger bubbles (3 meals)
+        appear slightly more often on cold days, and several darker circles
+        (higher emotional impact) also appear on cold, high-calorie days. From
+        this dataset, I would say that colder weather <strong>tends</strong> to
+        push my calories up and increase emotional or comfort eating, but other
+        factors like mood, schedule, and cravings also play a role.
+      </p>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
