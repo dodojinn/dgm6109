@@ -1,0 +1,79 @@
+.axisLabel {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.axis { /* used by d3.js when creating an axis */
+    font-size: 16pt;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+/* Page Base Style */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #222222;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Centered Content Area */
+#canvas-wrapper,
+#description,
+.page-header {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Header Area */
+
+.page-header {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0;
+}
+
+/* SVG Wrapper */
+
+#canvas {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Description Section */
+
+.section-block {
+    margin-bottom: 2rem;
+}
+
+.section-block p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}

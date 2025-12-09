@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cold Days, Warm Meals</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+    <!-- SVG -->
+    <div id="canvas-wrapper">
+      <div id="canvas"></div>
+    </div>
+
+    <header class="page-header">
+      <h1 class="project-title">Temperature and Daily Calorie Intake</h1>
+      <p class="project-subtitle">
+        A bubble scatterplot of my daily temperature, food intake, and emotions.
+      </p>
+    </header>
+
+    <!-- Visualization Description -->
+    <main id="description">
+      <section class="section-block">
+        <h2>Question</h2>
+        <p>
+          This project asks a simple question:
+          <strong>Does daily temperature affect how much I eat?</strong>
+          I wanted to see if colder or warmer days change my total calorie
+          intake and how I feel.
+        </p>
+        <h2>Hypothesis</h2>
+        <p>
+          <strong
+            >As temperature decreases, the total amount of food I consume
+            increases.</strong
+          >
+        </p>
+      </section>
+
+      <section class="section-block">
+        <h2>Data Overview</h2>
+        <p>
+          I collected data for the last month of the term. For each day, I
+          recorded the high and low temperature (in °C), total calories I ate
+          that day (in kcal), how many meals I had, the percentage of hot meals,
+          my emotional impact from 1 (very low) to 5 (very strong), and a short
+          weather note.
+        </p>
+        <p>
+          In the bubble scatterplot, the
+          <strong>x-axis</strong> shows the average temperature for the day, the
+          <strong>y-axis</strong> shows my total calories, bubble
+          <strong>size</strong> shows how many meals I ate, and bubble
+          <strong>color</strong> shows my emotional impact from light to dark
+          red.
+        </p>
+        <p>
+          I collected one row of data per day for 28 days. This gave me enough
+          points to see general trends even though it is still a small personal
+          dataset.
+        </p>
+      </section>
+
+      <section class="section-block">
+        <h2>Summarize</h2>
+        <p>
+          My calorie intake stays in a similar range, but there is a small
+          tendency for slightly cooler days to have higher calories. Emotional
+          impact does not follow a simple pattern: strong emotions appear on
+          both lower and mid temperatures.
+        </p>
+        <p>
+          Visually, most bubbles fall between roughly 1200 and 1800 kcal, and
+          there is no strong upward or downward trend across the full
+          temperature range. Darker bubbles, representing stronger emotional
+          impact, are scattered throughout rather than forming a specific
+          cluster.
+        </p>
+
+        <p>
+          Based on what the visualization shows, my first idea that “cold days always make me eat much
+          more” is only partly true. Other factors such as schedule, stress, or
+          mood likely also influence how much I eat.
+        </p>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
