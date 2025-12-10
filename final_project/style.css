@@ -1,0 +1,1110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #f3f3f6; /* grey background color */
+  color: #222222;
+}
+
+/* Hidden but accessible text for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Page max width centered */
+main {
+  max-width: 60rem;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+/* ========== Top header ========== */
+
+.site-header {
+  width: 100%;             
+  margin: 0;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #ffffff;
+}
+
+/* Left logo area */
+/* Outer container wrapping the icon, used to control size */
+.logo-icon-wrapper {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+/* logo image itself */
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-title {
+  margin: 0;
+  font-family: "Trebuchet MS", "Gill Sans", system-ui, sans-serif;
+  font-size: 1.4rem;
+}
+/* Put logo image and text in one line */
+.logo-area {
+  display: flex; /* Arrange items horizontally */
+  align-items: center; /* Vertically center align */
+  gap: 0.1rem; /* Space between image and text */
+}
+
+/* Middle navigation */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333333;
+  position: relative;
+  padding-bottom: 0.2rem;
+  transition: color 0.2s;
+}
+
+/* hover and active underline effect */
+.main-nav a {
+  text-decoration: none;
+  color: #222222;
+  
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0.2rem;
+  padding-left: 0;
+}
+
+/* hover effect */
+.main-nav a:hover {
+  color: #ff7fb5;
+
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #ff7fb5;
+}
+
+/* Current page active */
+.main-nav a.active {
+  color: #ff7fb5;
+
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #ff7fb5;
+}
+
+/* Right side search + user button */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: #f5f5f7;
+  border: 0.0625rem solid #dddddd;
+  font-size: 0.9rem;
+}
+
+.search-icon {
+  margin-right: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.search-form input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  min-width: 5rem;
+  font-size: 0.9rem;
+}
+
+/* User button */
+.user-button {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffc4dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  text-decoration: none; /* Remove underline from <a> */
+  color: inherit; /* Make icon color consistent with text */
+}
+
+.user-button:hover {
+  background-color: #f39ac4;
+}
+
+.user-button:active {
+  transform: scale(0.95);
+}
+
+/* ========== Large Banner ========== */
+
+.hero-image-section {
+  margin-top: 0;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+}
+
+/* ========== Popular This Week ========== */
+
+.popular-section {
+  margin-top: 1.5rem;
+}
+
+.popular-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.popular-card {
+  background-color: #f0ebff;
+  border-radius: 0.75rem;
+  padding: 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.popular-text {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.popular-button {
+  align-self: flex-end;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background-color: #ffc4dd;
+  color: #333333;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.popular-button:hover {
+  background-color: #f39ac4;
+}
+
+.popular-button:active {
+  transform: scale(0.95);
+}
+
+/* Divider */
+.divider {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+  border: none;
+  border-top: 0.0625rem solid #c9c9d4;
+}
+
+/* ========== Welcome Section ========== */
+
+.welcome-section {
+  margin-bottom: 1.5rem;
+}
+
+.welcome-title {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.welcome-card {
+  background-color: #e9ecf4;
+  border-radius: 0.75rem;
+  padding: 1.2rem;
+}
+
+.welcome-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+/* ========== About Us Section ========== */
+
+.about-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #ffc4dd;
+}
+
+.about-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.about-text {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.about-section-link {
+  display: block;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;       
+  color: #000000;              
+}
+
+/* 鼠标移上去有一点变化 */
+.about-section-link:hover {
+  background-color: #d9d9f0;   /* 稍微深一点 */
+}
+
+
+/* ========== Footer ========== */
+
+.site-footer {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666666;
+}
+
+/* ========== Responsive Layout ========== */
+
+/* Small screens (mobile) */
+@media (max-width: 48rem) {
+  .site-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo-area {
+    justify-content: center;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .header-right {
+    justify-content: center;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 60rem) {
+  body {
+    font-size: 1.05rem;
+  }
+}
+
+/* Genre Tags Button */
+.genres-tag-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.genre-tag-row {
+  display: flex;
+  justify-content: center; /* Center the 3 buttons evenly */
+  gap: 1.5rem; /* Control the distance between buttons (adjustable) */
+  margin-bottom: 1rem;
+}
+
+.genre-tag {
+  padding: 0.5rem 1.2rem;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  flex: 1; /* Each button automatically equal width */
+  max-width: 8rem; /* Limit maximum width to avoid being too long */
+  text-align: center;
+}
+
+.genre-tag:hover {
+  background-color: #ffe0f0;
+}
+
+.active-tag {
+  background-color: #f7c5d7;
+}
+
+/*Manga Card Layout*/
+.manga-card {
+  display: flex;
+  background-color: #e6e3f5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  gap: 1.2rem;
+}
+
+.manga-cover {
+  width: 11rem;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.manga-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.manga-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manga-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.manga-year {
+  margin: 0;
+  font-size: 1rem;
+  color: #444444;
+}
+
+.manga-tag-line {
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.tag-highlight {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.tag-plain {
+  margin-right: 1rem;
+  color: #444444;
+}
+
+/* White rounded text box */
+.manga-description-box {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  max-width: 35rem;
+}
+
+/* ========== Ranking Page Top Banner ========== */
+
+.ranking-hero {
+  margin-top: 1.8rem;
+  margin-bottom: 2rem;
+  background-color: #eceaf8; /* Light purple block */
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.ranking-hero-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ========== Ranking List Section ========== */
+
+.ranking-list-section {
+  margin-bottom: 2rem;
+}
+
+/* Five covers in a row, centered, wrap if needed */
+.ranking-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Each manga card */
+.ranking-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 8rem;
+}
+
+/* The 1st place in the middle is slightly larger */
+.featured-ranking {
+  max-width: 11rem;
+}
+
+/* Cover image */
+.ranking-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+/* Pink circular ranking number */
+.ranking-badge {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #ffc4dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Title and Score */
+.ranking-manga-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.ranking-score {
+  margin: 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.ranking-star {
+  color: #f2b200;
+}
+
+/* The Editor's Pick info block in the middle (below the cover) */
+.ranking-featured-info {
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* Editor's Pick Button */
+.editor-pick-button {
+  margin-top: 0.4rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #f0f0f5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.editor-pick-button:hover {
+  background-color: #e0e0ec;
+}
+
+.editor-pick-button:active {
+  transform: scale(0.96);
+}
+
+/* ========== Ranking Page: Simple Responsive ========== */
+
+/* Smaller screens have smaller gaps for better display */
+@media (max-width: 48rem) {
+  .ranking-row {
+    gap: 1rem;
+  }
+
+  .ranking-item {
+    max-width: 7rem;
+  }
+
+  .featured-ranking {
+    max-width: 9rem;
+  }
+}
+
+/* ========== Favourite Page Top Banner ========== */
+
+.favourite-hero {
+  margin-top: 1.8rem;
+  margin-bottom: 1.2rem;
+  background-color: #eceaf8; /* Same light purple as Top Ranking */
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.favourite-hero-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* User + Logout Button */
+
+.favourite-user-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.favourite-greeting {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logout-button {
+  display: inline-block; /* Make <a> behave like a button box */
+  text-decoration: none; /* Remove link underline */
+  color: #000; /* Set button text color */
+  border: none;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  background-color: #ffc4dd;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.logout-button:hover {
+  background-color: #f39ac4;
+}
+
+.logout-button:active {
+  transform: scale(0.96);
+}
+
+/* Favourite Manga Section */
+
+.favourite-grid-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #eceaf8; /* Large light purple block */
+}
+
+.favourite-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.favourite-item {
+  max-width: 8rem;
+  text-align: center;
+}
+
+.favourite-cover {
+  width: 8rem; /* Unified width */
+  height: 12rem; /* Unified height */
+  object-fit: cover; /* Crop image to maintain good aspect ratio */
+  border-radius: 0.25rem; /* Rounded corners */
+}
+
+.favourite-title {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Favourite Page Simple Responsive */
+
+@media (max-width: 48rem) {
+  .favourite-grid-section {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .favourite-grid {
+    gap: 1rem;
+  }
+
+  .favourite-item {
+    max-width: 7rem;
+  }
+}
+
+/* ========== User Page: Top Text ========== */
+
+.user-hero {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.user-hero-text {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #9b8ff5; /* Light purple text */
+}
+
+/* ========== User Page: Avatar + Form ========== */
+
+.user-form-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Large Pink Circular Avatar */
+.user-icon-big {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: #ffc4dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Overall Form Layout */
+.user-form {
+  width: 100%;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* Each Row: Label + Input */
+.user-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.user-form-row label {
+  font-size: 0.95rem;
+}
+
+/* Input Styles */
+.user-form-row input {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.15rem;
+  border: 0.0625rem solid #a8a8ff; /* Light purple border */
+  font-size: 0.95rem;
+}
+
+/* Submit Button */
+.user-submit-button {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: #ffc4dd;
+  color: black;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.user-submit-button:hover {
+  opacity: 0.85;
+}
+
+.user-submit-button:active {
+  transform: scale(0.96);
+}
+
+/* ========== Manga Detail Page ========== */
+
+/* Top Large Banner */
+.detail-hero-section {
+  margin-top: 0;
+}
+
+.detail-hero-image {
+  width: 100%;
+  display: block;
+}
+
+/* Middle Main Card */
+.detail-main-card {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #eceaf8;
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.detail-main-inner {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Left Side Cover */
+.detail-cover-wrapper {
+  width: 1rem;          
+  flex-shrink: 0; /* Prevent shrinking on small screens */
+}
+
+.detail-cover-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+/* Right Side Information */
+.detail-info {
+  flex: 1;
+  padding-top: 0.3rem; /* Align title better with cover */
+}
+
+.detail-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Tag Row */
+.detail-tag-line {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.detail-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  border-radius: 0.3rem;
+  background-color: #dcdcdc;
+  font-size: 0.85rem;
+}
+
+.detail-tag-main {
+  background-color: #f7c5d7;
+}
+
+/* Author & Rating */
+.detail-author {
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.detail-rating-label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.detail-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.detail-stars {
+  color: #f2b200;
+  font-size: 1.2rem;
+}
+
+.detail-score {
+  font-size: 0.95rem;
+}
+
+/* Button Row */
+.detail-actions-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.detail-action-button {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #ffc4dd;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.detail-action-button:hover {
+  background-color: #f39ac4;
+}
+
+.detail-action-button:active {
+  transform: scale(0.96);
+}
+.detail-button {
+  display: inline-block;         /* make <a> like a button */
+  padding: 0.6rem 1.2rem;
+  background-color: #ffc4dd;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.detail-button.secondary {
+  background-color: #ffc4dd;
+}
+
+.detail-button:hover {
+  opacity: 0.85;
+}
+
+/* Text blocks (Description / Why you'll love it) */
+.detail-text-card {
+  background-color: #eceaf8;
+  border-radius: 0.75rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.detail-text-title {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.detail-text-body {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Mobile Adaptation */
+@media (max-width: 48rem) {
+  .detail-main-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-cover-wrapper {
+    width: 9rem;
+  }
+
+  .detail-info {
+    width: 100%;
+  }
+}
+
+/* ========== About Page Styles ========== */
+
+.about-page-main {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+}
+
+/* Top About Us Bar */
+.about-page-heading {
+  background-color: #e7e7f5;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-page-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+}
+
+/* Text and Image Two-Column Area */
+.about-page-intro {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Left Image Card */
+.about-page-image-card {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 40%;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page-image {
+  width: 100%;
+  display: block;
+  border-radius: 0.75rem;
+}
+
+/* Right Text Card */
+.about-page-text-card {
+  flex-grow: 1;
+  background-color: #e9ecff;
+  border-radius: 0.75rem;
+  padding-top: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.about-page-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Contact Area */
+.about-page-contact {
+  margin-top: 1rem;
+}
+
+/* Pink Button */
+.about-contact-button {
+  border: none;
+  background-color: #ffc4dd;
+  color: #222222;
+  padding-top: 0.6rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.about-contact-button:hover {
+  opacity: 0.9;
+}
+
+/* Email and Phone Rows */
+.about-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-contact-icon {
+  font-size: 1.2rem;
+}
+
+.about-contact-text {
+  font-size: 1rem;
+}
+
+/* Pink footer */
+.about-footer {
+  margin-top: 2rem;
+  background-color: #ffc4dd;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.about-footer-icons {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.about-footer-link {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #222222;
+}
+
+/* Small screens: Stack vertically */
+@media (max-width: 48rem) {
+  .about-page-intro {
+    flex-direction: column;
+  }
+
+  .about-page-image-card {
+    flex-basis: auto;
+  }
+}

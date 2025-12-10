@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MangaVerse - Success</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- top Header：和其它页面一样 -->
+    <header class="site-header">
+      <div class="logo-area">
+        <div class="logo-icon-wrapper">
+          <img
+            src="images/logo.png"
+            alt="MangaVerse logo"
+            class="logo-image"
+          />
+        </div>
+
+        <div class="logo-text">
+          <p class="logo-title">MangaVerse</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="genres.html">Genres</a></li>
+          <li><a href="ranking.html">Ranking</a></li>
+          <li><a href="favourite.html">Favourite</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <form class="search-form" role="search">
+          <label class="visually-hidden" for="search-input-success">
+            Search manga
+          </label>
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            id="search-input-success"
+            type="search"
+            placeholder="Search"
+          />
+        </form>
+
+        <a href="user.html" class="user-button" aria-label="User profile">
+          <span aria-hidden="true">👤</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 上面的紫色标语，复用 user 页样式 -->
+      <section class="user-hero">
+        <p class="user-hero-text">‘ Welcome back to MangaVerse! ’</p>
+      </section>
+
+      <!-- 中间的成功提示卡片 -->
+      <section class="success-section">
+        <div class="success-card">
+          <p class="success-message">
+            You have logged in / signed up successfully.
+          </p>
+          <p class="success-note">
+            Click OK to view your Favourite list.
+          </p>
+          
+          <a href="favourite.html" class="success-button">OK</a>
+        </div>
+      </section>
+
+    <!-- About Us -->
+      <section class="about-section">
+        <a href="about.html" class="about-section-link">
+          <h2 class="about-title">◎ About Us</h2>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 MangaVerse. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
